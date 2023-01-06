@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx eslint src/**
+npx --no-install commitlint --edit $1
+
+# --no-verify 在提交时跳过检查 commit 后面添加 --no-verify
